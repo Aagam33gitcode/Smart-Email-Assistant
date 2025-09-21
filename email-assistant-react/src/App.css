@@ -1,0 +1,310 @@
+
+.App {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Enhanced Container Styling */
+.MuiContainer-root {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  padding: 3rem 2rem !important;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.MuiContainer-root::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+
+/* Title Styling */
+.MuiTypography-h3 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700 !important;
+  text-align: center;
+  margin-bottom: 2.5rem !important;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.MuiTypography-h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+/* Form Box Enhancement */
+.MuiBox-root {
+  position: relative;
+}
+
+/* TextField Enhancements */
+.MuiTextField-root {
+  margin-bottom: 1.5rem !important;
+}
+
+.MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.MuiOutlinedInput-root:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: rgba(102, 126, 234, 0.2) !important;
+  transition: all 0.3s ease;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(102, 126, 234, 0.4) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #667eea !important;
+  border-width: 2px !important;
+}
+
+/* FormControl Enhancements */
+.MuiFormControl-root {
+  margin-bottom: 1.5rem !important;
+}
+
+.MuiSelect-select {
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.MuiSelect-select:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Button Enhancements */
+.MuiButton-root {
+  border-radius: 12px !important;
+  padding: 12px 32px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.MuiButton-contained {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3) !important;
+  color: white !important;
+}
+
+.MuiButton-contained:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4) !important;
+}
+
+.MuiButton-contained:active {
+  transform: translateY(-1px);
+}
+
+.MuiButton-outlined {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 2px solid #667eea !important;
+  color: #667eea !important;
+  backdrop-filter: blur(10px);
+}
+
+.MuiButton-outlined:hover {
+  background: rgba(102, 126, 234, 0.1) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2) !important;
+}
+
+/* Loading Button */
+.MuiButton-root:disabled {
+  background: linear-gradient(135deg, #ccc 0%, #999 100%) !important;
+  color: white !important;
+}
+
+/* CircularProgress Enhancement */
+.MuiCircularProgress-root {
+  color: white !important;
+}
+
+/* Generated Reply Section */
+.reply-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.MuiTypography-h6 {
+  color: #667eea !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Error Message Styling */
+.MuiTypography-root[color="error"] {
+  background: rgba(244, 67, 54, 0.1);
+  color: #d32f2f !important;
+  padding: 1rem;
+  border-radius: 12px;
+  border-left: 4px solid #f44336;
+  margin: 1rem 0 !important;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Copy Button Special Styling */
+.copy-button {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%) !important;
+  color: white !important;
+  margin-top: 1rem !important;
+}
+
+.copy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .MuiContainer-root {
+    padding: 1.5rem 1rem !important;
+    margin: 1rem 0.5rem !important;
+    border-radius: 16px;
+  }
+  
+  .MuiTypography-h3 {
+    font-size: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .MuiButton-root {
+    padding: 10px 24px !important;
+  }
+  
+  .MuiTextField-root .MuiOutlinedInput-root {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 960px) {
+  .MuiContainer-root {
+    padding: 2rem 1.5rem !important;
+    margin: 1.5rem 1rem !important;
+  }
+  
+  .MuiTypography-h3 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (min-width: 961px) {
+  .MuiContainer-root {
+    max-width: 800px !important;
+  }
+  
+  .MuiTextField-root .MuiOutlinedInput-root {
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .MuiContainer-root {
+    background: rgba(30, 30, 30, 0.95);
+    color: white;
+  }
+  
+  .MuiOutlinedInput-root {
+    background: rgba(50, 50, 50, 0.8);
+    color: white;
+  }
+  
+  .MuiInputLabel-root {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  
+  .reply-section {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: rgba(102, 126, 234, 0.2);
+  }
+}
+
+/* Accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .MuiButton-contained {
+    background: #000 !important;
+    border: 2px solid #fff !important;
+  }
+  
+  .MuiOutlinedInput-notchedOutline {
+    border-color: #000 !important;
+    border-width: 2px !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .MuiContainer-root {
+    background: white !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .MuiButton-root {
+    display: none !important;
+  }
+  
+  .MuiTypography-h3 {
+    color: black !important;
+    -webkit-text-fill-color: unset !important;
+  }
+}
